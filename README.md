@@ -1,5 +1,6 @@
 To run the project
-
+git clone https://github.com/Avinep123/bmi_calculator.git
+cd bmi_calculator
 
 To create database in MYSQL
 create database bmi;

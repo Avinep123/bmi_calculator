@@ -1,0 +1,301 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f7f9fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #444;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+nav {
+    order: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+}
+
+h1,
+h2,
+h3 {
+    color: #444;
+}
+
+.bmi-table {
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+.bmi-table,
+.bmi-table th,
+.bmi-table td {
+    border: 1px solid #ddd;
+}
+
+.bmi-table th,
+.bmi-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.bmi-table th {
+    background-color: #444;
+    color: white;
+}
+
+.bmi-table tr:nth-child(even) {
+    background-color: #f7f9fb;
+}
+
+.bmi-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.bmi-table thead th {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+button:active {
+    background-color: #222;
+    color: white;
+}
+
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 0em 0;
+    margin-top: auto;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.intro-text {
+    width: 70%;
+}
+
+.intro-photo {
+    width: 25%;
+}
+
+.intro-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.bmi-table-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2em;
+}
+
+.bmi-table-content {
+    flex: 1;
+    margin-right: 1em;
+}
+
+.bmi-photo {
+    width: 25%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    top: 2.7em;
+}
+
+.bmi-photo img {
+    max-width: 91%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.calculate-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.calculate-container h2 {
+    color: #444;
+    margin-bottom: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* View Data Page */
+.view-data-container {
+
+    margin: 0 auto;
+    background-color: white;
+    padding: 2em;
+
+    border-radius: 8px;
+    text-align: center;
+}
+
+.view-data-container h2 {
+    color: #444;
+    margin-bottom: 1em;
+}
+
+.data-table {
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+.data-table,
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #444;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f7f9fb;
+}
+
+.data-table tr:nth-child(odd) {
+    background-color: #fff;
+}

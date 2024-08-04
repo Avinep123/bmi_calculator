@@ -1,0 +1,208 @@
+{% extends 'bmi/base.html' %}
+{% load static %}
+{% block title %}Suggestions{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'bmi/suggestions.css' %}">
+<div class="suggestion-container">
+    <h2>Suggestions for {{ bmi_classification }}</h2>
+
+    {% if bmi_classification == "Underweight" %}
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>How to Increase Your BMI</h4>
+                <p>If your BMI is on the low side, you may be underweight. Of course, there could be various reasons
+                    why, so
+                    it’s best to consult with your doctor before making any major dietary or lifestyle changes.</p>
+                <p>Here are some healthy ways to increase your BMI:</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <strong>Add healthy calories:</strong>
+                <p>The most effective way to gain weight and consequently increase your BMI is to consume more
+                    calories than your body needs. Healthline suggests increasing by 300-500 calories daily above
+                    your maintenance level for steady weight gain. Incorporating nutrient-dense foods such as
+                    avocados, nuts, seeds, and eggs can contribute significantly to your daily calorie intake.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/healthyct.jpg' %}" alt="Add Healthy Calories">
+            </div>
+        </div>
+    </div>
+
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>Eat More Frequently</h4>
+                <p>Consider spreading out your food intake by having five to six smaller meals throughout the day
+                    instead of
+                    sticking to the traditional three larger ones. This approach can make increasing your calorie intake
+                    feel more manageable and less overwhelming.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>Build Muscle</h4>
+                <p>Incorporating strength training into your routine effectively contributes to weight gain by adding
+                    muscle
+                    mass instead of just fat. Working with a trainer initially to ensure you're performing exercises
+                    correctly can be beneficial.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/pushup.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+
+    {% elif bmi_classification == "Healthy" %}
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>Maintain a Healthy Weight</h4>
+                <p>Being in the normal weight range is a good place to be. Here are some tips to help maintain your
+                    current
+                    weight:</p>
+            </div>
+        </div>
+    </div>
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+
+                <h4>Regular Exercise</h4>
+                <p>Engage in regular physical activity to keep fit. Aim for at
+                    least
+                    150 minutes of moderate aerobic exercise or 75 minutes of vigorous activity each week, combined
+                    with
+                    muscle-strengthening exercises.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/Re.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+
+                <h4>Balanced Diet</h4>
+                <p>Maintain a balanced diet with a variety of nutrients.
+                    Incorporate
+                    plenty of fruits, vegetables, lean proteins, and whole grains into your meals.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/se.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    {% elif bmi_classification == "Overweight" %}
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>How to Reduce Your BMI</h4>
+                <p>Here’s some advice for losing weight if your BMI is high:</p>
+            </div>
+        </div>
+    </div>
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+
+                <h4>Reduce your Daily Calorie Intake</h4>
+                <p> EConsider reducing your daily intake by around 600 calories to
+                    lose weight safely. Use a food
+                    diary or online tracker to monitor your calories and make balanced food choices.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/ci.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+
+                <h4>Move more</h4>
+                <p> Increase your physical activity through regular cardio workouts like HIIT, spinning,
+                    or
+                    walking.
+                    Small daily changes, like taking the stairs, can also contribute to weight loss.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/rn.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+
+
+    {% elif bmi_classification == "Obesity" %}
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>How to Manage Obesity</h4>
+                <p>Addressing obesity requires a comprehensive approach. Here are some strategies:</p>
+            </div>
+        </div>
+    </div>
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>Seek guidance from a healthcare provider</h4>
+                <p>Work with a healthcare professional to create a personalized weight loss plan and address any
+                    underlying health conditions.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/obs.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+                <h4>Focus on a healthy diet</h4>
+                <p>Prioritize a balanced diet with portion control. Reduce intake of high-calorie,
+                    low-nutrient
+                    foods and increase consumption of vegetables and lean proteins.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/ci.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+
+    <div class="suggestion-item">
+        <div class="suggestion-content">
+            <div class="suggestion-text">
+
+                <h4>Regular Exercise</h4>
+                <p>Engage in regular physical activity to keep fit. Aim
+                    for
+                    at
+                    least
+                    150 minutes of moderate aerobic exercise or 75 minutes of vigorous activity each
+                    week, combined
+                    with
+                    muscle-strengthening exercises.</p>
+            </div>
+            <div class="suggestion-photo">
+                <img src="{% static 'bmi/ex.jpg' %}" alt="Build Muscle">
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+</div>
+{% endblock %}

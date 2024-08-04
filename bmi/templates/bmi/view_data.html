@@ -1,0 +1,37 @@
+{% extends 'bmi/base.html' %}
+{% load static %}
+{% block title %}View Data{% endblock %}
+
+{% block content %}
+<div class="view-data-container">
+    <h2>Stored User Data</h2>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Height (m)</th>
+                <th>Weight (kg)</th>
+                <th>BMI</th>
+                <th>Classification</th>
+                <th>Suggestions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.get_gender_display }}</td>
+                <td>{{ user.height }}</td>
+                <td>{{ user.weight }}</td>
+                <td>{{ user.bmi|floatformat:2 }}</td>
+                <td>{{ user.bmi_classification }}</td>
+                <td><a href="{% url 'suggestions' user.bmi_classification %}">View Suggestions</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

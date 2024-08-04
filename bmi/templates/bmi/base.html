@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}BMI Calculator{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bmi/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>BMI Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'calculate_bmi' %}">Calculate BMI</a></li>
+                <li><a href="{% url 'view_data' %}">View Data</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <p>Web Project 2024</p>
+    </footer>
+</body>
+
+</html>

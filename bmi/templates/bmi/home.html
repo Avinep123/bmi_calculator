@@ -1,0 +1,61 @@
+{% extends 'bmi/base.html' %}
+{% load static %}
+{% block content %}
+<div class="intro-container">
+    <div class="intro-text">
+        <h2>Welcome to the BMI Calculator</h2>
+        <p>
+            The BMI (Body Mass Index) calculator is a simple tool to help you determine if you have a healthy body
+            weight for your height. It provides a numerical value that falls into various categories to help assess your
+            body weight status.
+        </p>
+        <p>
+            To use the calculator, simply enter your weight and height into the appropriate fields, and the calculator
+            will compute your BMI. Based on your BMI, you'll receive information on whether you are underweight, normal
+            weight, overweight, or obese.
+        </p>
+        <p>
+            If you need personalized suggestions based on your BMI category, you can click on the "Suggestion" button on
+            the <a href="{% url 'calculate_bmi' %}">Calculate BMI</a> page after obtaining your BMI result.
+        </p>
+    </div>
+    <div class="intro-photo">
+        <img src="{% static 'bmi/BMI.jpg' %}" alt="BMI Calculator">
+    </div>
+</div>
+
+<div class="bmi-table-container">
+    <div class="bmi-table-content">
+        <h3>BMI Categories</h3>
+        <table class="bmi-table">
+            <thead>
+                <tr>
+                    <th>BMI Range</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Below 18.5</td>
+                    <td>Underweight</td>
+                </tr>
+                <tr>
+                    <td>18.5 - 24.9</td>
+                    <td>Normal weight</td>
+                </tr>
+                <tr>
+                    <td>25 - 29.9</td>
+                    <td>Overweight</td>
+                </tr>
+                <tr>
+                    <td>30 and above</td>
+                    <td>Obesity</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="bmi-photo">
+        <img src="{% static 'bmi/bmii.jpg' %}" alt="BMI Categories">
+    </div>
+</div>
+{% endblock %}

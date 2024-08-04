@@ -1,4 +1,3 @@
-# bmi/models.py
 from django.db import models
 
 class User(models.Model):
@@ -10,13 +9,13 @@ class User(models.Model):
     name = models.CharField(max_length=100)
     age = models.IntegerField()
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
-    height = models.FloatField()  # height in meters
+    height = models.FloatField()  # height in cm
     weight = models.FloatField()  # weight in kg
     bmi = models.FloatField(blank=True, null=True)
     bmi_classification = models.CharField(max_length=50, blank=True)
 
     def save(self, *args, **kwargs):
-        height_in_meters = self.height / 100  # Convert cm to meters if height is in cm
+        height_in_meters = self.height / 100  # Convert cm to meters
         self.bmi = self.weight / (height_in_meters ** 2)
         
         if self.bmi < 18.5:

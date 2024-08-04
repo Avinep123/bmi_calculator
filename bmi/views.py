@@ -1,4 +1,3 @@
-# bmi/views.py
 from django.shortcuts import render, redirect
 from .forms import UserForm
 from .models import User
